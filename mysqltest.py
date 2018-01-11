@@ -1,6 +1,7 @@
 import mysql.connector
+from sklearn import tree
 
-cnx = mysql.connector.connect(user='root', database='Las', password='Welkom01', host='127.0.0.1')
+cnx = mysql.connector.connect(user='root', database='afstud', password='RiverS*ng51', host='127.0.0.1')
 cursor1 = cnx.cursor(buffered=True)
 cursor2 = cnx.cursor(buffered=True)
 allWeldsQuery = ("SELECT Item, Weld, WelderID, Weldingdevice FROM lasdata")
@@ -30,8 +31,9 @@ inspectWeldlist = [i for sub in inspectWeldlist for i in sub]
 cursor2.close()
 
 cnx.close()
+print(allWeldsList)
 
-print inspectWeldlist
+
 
 
 
